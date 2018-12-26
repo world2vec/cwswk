@@ -4,21 +4,22 @@ the source code for paper chinese word segmentation with world knowledge
 
 How to
 ============
+0. download the bert model [BERT](https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip) to folder data/bert/ if you want to train mode CWSB or CWSBD
 
-0. preprocess data(will save the train, val, test dataset under folder data
+1. preprocess data(will save the train, val, test dataset under folder data)
 ```
 python preprocess.py
 ```
-1. train and save model CWSB for dataset pku
+2. train and save model CWSB for dataset pku
 ```
 python train.py -m CWSD -ds pku -save
 ```
-2. debug:
+3. debug:
 ```python
 python train.py -m CWSD -ds pku -d
 ```
 
-3. predict using saved model on epoch 2:
+4. predict using saved model on epoch 2:
 ```
 python train.py -m pred_model -ms CWSD -ds pku -s 2
 ```
